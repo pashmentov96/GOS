@@ -17,7 +17,7 @@ vector<string> readMessages() {
 }
 
 bool isAlpha(char c) {
-	return isalpha(c) || ('à' <= c && c <= 'ÿ') || ('À' <= c && c <= 'ß');
+	return isalpha(c) || ('Ð°' <= c && c <= 'Ñ') || ('Ð' <= c && c <= 'Ð¯');
 }
 
 void codeMessages(string &inputPath, string &outputPath)
