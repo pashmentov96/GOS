@@ -8,10 +8,10 @@ using namespace std;
 vector <string> split(const string &str, char delimiter) {
 	string tmp;
 	vector <string> result;
-	for (char c: str) {
+	for (char c : str) {
 		if (c == delimiter) {
 			result.push_back(tmp);
-			tmp = "";	
+			tmp = "";
 		} else {
 			tmp += c;
 		}
@@ -26,11 +26,11 @@ vector <vector <string> > getParamsFromStr(const string &str) {
 	string tmp = str.substr(1, str.size() - 2);
 	vector <string> elements = split(tmp, ')');
 	vector <vector <string> > result;
-	for (auto s: elements) {
+	for (auto s : elements) {
 		string params = s.substr(s.find('(') + 1);
 		result.push_back(split(params, ','));
 	}
-	return result;	
+	return result;
 }
 
 void decodeMessages() {
@@ -40,7 +40,7 @@ void decodeMessages() {
 		getline(cin, str);
 		auto messages = getParamsFromStr(str);
 
-		for (auto params: messages) {
+		for (auto params : messages) {
 			string result = "";
 			int lastPos = 3;
 			for (int i = 0; i < params.size(); ++i) {
@@ -51,12 +51,12 @@ void decodeMessages() {
 			}
 			result += pattern.substr(lastPos);
 			cout << result << endl;
-		}	
-    }
+		}
+	}
 }
 
 int main() {
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
-    decodeMessages();
+	decodeMessages();
 }

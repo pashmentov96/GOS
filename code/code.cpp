@@ -25,12 +25,12 @@ bool isLower(char c) {
 void codeMessages() {
     vector <string> messages = readMessages();
     map <string, vector <vector <string> > > patterns;
-    for (auto message: messages) {
+    for (auto message : messages) {
         string pattern;
         vector <string> params;
         string word;
         bool isUpper = true;
-        for (char c: message) {
+        for (char c : message) {
             if (isAlpha(c)) {
                 word += c;
                 if (isLower(c)) {
@@ -47,18 +47,18 @@ void codeMessages() {
                 word = "";
                 isUpper = true;
                 if (c != '\n') {
-                	pattern += c;
+                    pattern += c;
                 }
             }
         }
         patterns[pattern].push_back(params);
     }
     int num = 0;
-    for (auto pattern: patterns) {
+    for (auto pattern : patterns) {
         cout << "#" << num << ":" << pattern.first << endl;
         cout << "[";
         bool firstParams = true;
-        for (auto params: pattern.second) {
+        for (auto params : pattern.second) {
             if (firstParams) {
                 firstParams = false;
             } else {
@@ -66,7 +66,7 @@ void codeMessages() {
             }
             cout << "(";
             bool isFirstParam = true;
-            for (auto param: params) {
+            for (auto param : params) {
                 if (isFirstParam) {
                     isFirstParam = false;
                 } else {
