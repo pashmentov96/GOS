@@ -17,7 +17,7 @@ vector <string> readMessages() {
 }
 
 bool isAlpha(char c) {
-    return isalpha(c) || ('à' <= c && c <= 'ÿ') || ('À' <= c && c <= 'ß');
+    return isalpha(c) || ('Ð°' <= c && c <= 'Ñ') || ('Ð' <= c && c <= 'Ð¯');
 }
 
 void codeMessages(string &inputPath, string &outputPath) {
@@ -124,9 +124,9 @@ int main(int argc, char* argv[]) {
 		} else if (type == "decode") {
 			decodeMessages(input, output);
 		} else {
-			throw "Ðåæèì ìîæåò áûòü òîëüêî code/decode";
+			throw "Ð ÐµÐ¶Ð¸Ð¼ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ code/decode";
 		}
 	} else {
-		throw "Íåïðàâèëüíî óêàçàíû àðãóìåíòû";
+		throw "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ ÑƒÐºÐ°Ð·Ð°Ð½Ñ‹ Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ñ‹";
 	}
 }
