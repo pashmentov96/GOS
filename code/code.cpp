@@ -15,11 +15,11 @@ vector <string> readMessages() {
 }
 
 bool isAlpha(char c) {
-    return isalpha(c) || ('à' <= c && c <= 'ÿ') || ('À' <= c && c <= 'ß');
+    return isalpha(c) || ('Ð°' <= c && c <= 'Ñ') || ('Ð' <= c && c <= 'Ð¯');
 }
 
 bool isLower(char c) {
-    return islower(c) || ('à' <= c && c <= 'ÿ');
+    return islower(c) || ('Ð°' <= c && c <= 'Ñ');
 }
 
 void codeMessages() {
