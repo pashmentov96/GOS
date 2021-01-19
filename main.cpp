@@ -2,7 +2,6 @@
 #include <vector>
 #include <map>
 #include <string>
-#include <Windows.h>
 
 using namespace std;
 
@@ -16,7 +15,7 @@ vector <string> readMessages() {
 }
 
 bool isAlpha(char c) {
-    return isalpha(c) || ('à' <= c && c <= 'ÿ') || ('À' <= c && c <= 'ß');
+    return isalpha(c) || ('À' <= c && c <= 'ÿ') || ('À' <= c && c <= 'ß');
 }
 
 bool isLower(char c) {
@@ -135,6 +134,6 @@ void decodeMessages() {
 int main() {
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
-    // codeMessages();
-    decodeMessages();
+    codeMessages();
+    // decodeMessages();
 }
